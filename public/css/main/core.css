@@ -1,0 +1,178 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f7f9fc;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #007bff;
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    color: #f1f1f1;
+}
+
+/* Main Container */
+.main-container {
+    padding: 40px 20px;
+}
+
+/* Profile Container */
+.profile-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h4 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #007bff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.profile-container .register-icon img {
+    margin-right: 15px;
+}
+
+.nav-tabs {
+    border: none;
+    margin-bottom: 20px;
+}
+
+.nav-tabs .nav-link {
+    color: #007bff;
+    font-weight: 600;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.tab-pane {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Alerts */
+.alert {
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* Orders Table */
+.table th, .table td {
+    text-align: center;
+    padding: 15px;
+}
+
+.table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.table tbody tr:hover {
+    background-color: #e2e6ea;
+}
+
+.table .btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.table .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+/* Buttons */
+.btn-close {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+
+.btn-close:hover {
+    color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        width: 90%;
+    }
+
+    .nav-tabs .nav-item {
+        font-size: 0.9em;
+    }
+}

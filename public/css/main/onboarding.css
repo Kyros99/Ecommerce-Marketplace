@@ -1,0 +1,174 @@
+/* General Body Styles */
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+/* Main container to align the two sections side by side */
+.main-container {
+    display: flex;
+    height: 100vh;
+    background-color: #fff;
+}
+
+/* Left Section - Welcome Text and Image */
+.col-5 {
+    background-color: #019eff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+}
+
+.col-5 img {
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+.col-5 h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.col-5 h2:last-child {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Right Section - Form Styling */
+.col-7 {
+    background-color: #f9f9f9;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* Title and Form Heading */
+h4 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+h4 .register-icon img {
+    width: 64px;
+    height: 64px;
+    margin-right: 20px;
+}
+
+hr {
+    border: 1px solid #e3e3e3;
+    margin: 20px 0;
+}
+
+/* Form Inputs */
+.form-group input {
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #019eff;
+    box-shadow: 0 0 5px rgba(1, 158, 255, 0.3);
+    outline: none;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background-color: #019eff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #017dbd;
+}
+
+/* Skip Button */
+a.btn-outline-secondary {
+    border-color: #ccc;
+    color: #555;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+a.btn-outline-secondary:hover {
+    background-color: #f1f1f1;
+    color: #019eff;
+}
+
+/* Error Message Styling */
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+/* Form Section - Headings */
+p {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .col-5 {
+        height: 50%;
+        padding: 20px;
+    }
+
+    .col-7 {
+        padding: 20px;
+    }
+
+    .form-group input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button[type="submit"], a.btn-outline-secondary {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}

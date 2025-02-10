@@ -1,0 +1,93 @@
+/* General Styles */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Main Container */
+.main-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Left Side (Form) */
+.main-container .col-7 {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+}
+
+h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #343a40;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.register-icon img {
+    width: 64px;
+    height: 64px;
+    margin-right: 20px;
+}
+
+/* Form Inputs */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #495057;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+}
+
+/* Remember Me Checkbox */
+.remember-me-checkbox {
+    margin-right: 10px;
+}
+
+.remember-me-label {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+/* Login Button */
+.btn-primary {
+    background-color: #007bff;}
+
