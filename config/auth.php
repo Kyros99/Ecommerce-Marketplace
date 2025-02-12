@@ -1,7 +1,7 @@
 <?php
 
 return [
-
+    'jwt_secret' => '179fec6f68161d6f775c26c2c7aca9edd397e73eabe3c52dc6a44a3757f20698',
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults
