@@ -57,6 +57,9 @@ class RegisterController extends AccessController
             $token = $user->getUserToken(true);
             Cookie::queue('user_token',$token,60*24*30);
 
+            session(['first_name' => $user->getPropelModel()->getFirstname()]);
+            session(['last_name' => $user->getPropelModel()->getLastname()]);
+
             //Return/Redirect
             return redirect('/onboarding');
 

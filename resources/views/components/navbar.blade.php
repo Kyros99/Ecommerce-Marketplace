@@ -16,7 +16,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="/assets/icons/user-profile.png" width="24" style="margin-right: 10px;"/>
-                        <span> {{ ($first_name ?? 'John' ) . ' ' . ($last_name ?? 'Doe' ) }} </span>
+                        <span> {{ (session('first_name') ?? 'John' ) . ' ' . (session('last_name') ?? 'Doe' ) }} </span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="/user">Settings</a></li>

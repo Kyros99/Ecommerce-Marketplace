@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\TokenHelper;
 use App\Services\Marketplace\User;
 use Error;
 use Illuminate\Http\Request;
@@ -36,7 +37,6 @@ class LoginController extends AccessController
             {
                 throw new Error('User does not exist with this email');
             }
-
             //Check for password match
             $password = $payload['password'];
             if(!$user->authenticate($password)){
@@ -47,6 +47,12 @@ class LoginController extends AccessController
             $rememberMe = isset($payload['remember_me']);
             $token = $user->getUserToken($rememberMe);
             Cookie::queue('user_token',$token, $rememberMe ? 60*24*30 : 0);
+
+            session(['first_name' => $user->getPropelModel()->getFirstname()]);
+            session(['last_name' => $user->getPropelModel()->getLastname()]);
+
+
+
 
             //Return/Redirect
             return redirect($request->get('redirect') ?: '/');
