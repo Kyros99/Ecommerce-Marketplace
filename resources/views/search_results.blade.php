@@ -19,7 +19,7 @@
         <div class="input-group">
             <input type="search" class="form-control" placeholder="Search for a Product" required
                    aria-label="Search for a Product" aria-describedby="search-button" name="search"
-                   value="{{ $payload['search']}}">
+                   value="{{ $payload['search'] ?? ''}}">
             <button class="btn btn-primary" type="submit" id="search-button">Search</button>
         </div>
     </form>
@@ -29,7 +29,7 @@
         <div class="filter-container col-3"
              style="padding: 20px 40px; border-right: 1px solid #ccc; margin-top: 20px;">
             <form id="filter-form" action="/search_results" method="get">
-                <input type="hidden" name="search" value="{{ $payload['search']}}">
+                <input type="hidden" name="search" value="{{ $payload['search'] ?? ''}}">
                 <select class="form-select" name="order_by"
                         onchange="document.getElementById('filter-form').submit()">
                     <option selected disabled>Order By</option>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -21,26 +20,26 @@
                 <button class="btn btn-primary" type="submit" id="search-button">Search</button>
             </div>
         </form>
-        {{--<h4>Or navigate by category:</h4>
+        <h4>Or navigate by category:</h4>
         <br>
-         <div class="card-container d-flex justify-content-center" style="flex-wrap: wrap;">
+        <div class="card-container d-flex justify-content-center" style="flex-wrap: wrap;">
 
-@foreach ($ProductCategories as $index => $category )
-<a href="/search_results?category_id={{$category['CategoryId']}}"
-  class="card align-items-center d-flex justify-content-center"
-  style="width: 30%; height: 150px; margin: 1%; text-decoration: none; color: #000; font-size: 1.2em;
+            @foreach ($ProductCategories as $index => $category )
+                <a href="/search_results?category_id={{$category['CategoryId']}}"
+                   class="card align-items-center d-flex justify-content-center"
+                   style="width: 30%; height: 150px; margin: 1%; text-decoration: none; color: #000; font-size: 1.2em;
    background-color: {{$colors[$index % count($colors)]}};">
-   <span>{{$category['Title']}}</span>
-</a>
-@endforeach
+                    <span>{{$category['Title']}}</span>
+                </a>
+            @endforeach
 
-</div>
---}}
-<br>
-<a href="/business/register" class="btn btn-outline-primary">Register Your Business</a>
-<br>
-<br>
-</div>
+        </div>
+        --}}
+        <br>
+        <a href="/business/register" class="btn btn-outline-primary">Register Your Business</a>
+        <br>
+        <br>
+    </div>
 </div>
 </body>
 </html>
