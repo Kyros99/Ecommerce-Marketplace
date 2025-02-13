@@ -13,17 +13,7 @@ class OrderProduct extends PropelService
     {
         return 'OrderProduct';
     }
-
-    public function createWithArray($arguments = [])
-    {
-        try {
-            //Create Model
-            $model = new \App\Propel\OrderProduct();
-            $this->setPropelModel($model);
-            return $this->updateWithArray($arguments);
-
-        } catch (Throwable $exception) {
-            throw new Exception(sprintf('%s failed to be created', $this->getPropelModelName()), 0, $exception);
-        }
+    public function getNewPropelModel(){
+        return new \App\Propel\OrderProduct();
     }
 }

@@ -81,12 +81,8 @@ class Product extends PropelService
         return 'Product';
     }
 
-    public function createWithArray($arguments = [])
-    {
-        //Create Model
-        $model = new \App\Propel\Product();
 
-        $this->setPropelModel($model);
-        return $this->updateWithArray($arguments);
+    public function getNewPropelModel(){
+        return new \App\Propel\Product();
     }
 }

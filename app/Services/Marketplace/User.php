@@ -59,8 +59,6 @@ class User extends PropelService
 
 
         }
-
-
     }
 
     public function updateWithArray($arguments = []) {
@@ -103,5 +101,9 @@ class User extends PropelService
         //Get hashed Password
         $hashedPassword = $this->getPropelModel()->getPassword();
         return password_verify($password, $hashedPassword);
+    }
+
+    public function getNewPropelModel(){
+        return new \App\Propel\User();
     }
 }

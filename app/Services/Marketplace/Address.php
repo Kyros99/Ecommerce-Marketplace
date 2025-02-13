@@ -10,18 +10,6 @@ use Throwable;
 
 class Address extends PropelService
 {
-    public function createWithArray($arguments = []) {
-        try{
-            //Create Model
-            $model = new \App\Propel\Address();
-
-            $this->setPropelModel($model);
-            return $this->updateWithArray($arguments);
-
-        }catch (Throwable $exception){
-            throw new Exception(sprintf('%s failed to be created',$this->getPropelModelName()),0,$exception);
-        }
-    }
 
     public function loadByUserId($userId)
     {
@@ -32,7 +20,11 @@ class Address extends PropelService
         return !is_null($this->getPropelModel());
     }
 
-    function getPropelModelName()
+    public function getNewPropelModel(){
+        return new \App\Propel\Address();
+    }
+
+    public function getPropelModelName()
     {
         return 'Address';
     }

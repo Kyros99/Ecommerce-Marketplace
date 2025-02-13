@@ -105,6 +105,10 @@ class CartProduct extends PropelService
         return 'CartProduct';
     }
 
+    public function getNewPropelModel(){
+        return new \App\Propel\CartProduct();
+    }
+
     public function getList($userId)
     {
         return CartProductQuery::create()

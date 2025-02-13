@@ -17,16 +17,12 @@ class Business extends PropelService{
         return !is_null($this->getPropelModel());
     }
 
-    public function createWithArray($arguments = []) {
-        //Create Model
-        $model = new \App\Propel\Business();
-
-        $this->setPropelModel($model);
-        return $this->updateWithArray($arguments);
-    }
-
     public function getPropelModelName()
     {
         return 'Business';
+    }
+
+    public function getNewPropelModel(){
+        return new \App\Propel\Business();
     }
 }

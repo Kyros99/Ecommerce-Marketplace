@@ -16,7 +16,17 @@ abstract class PropelService extends DatabaseAccessService
 
     abstract function getPropelModelName();
 
+    abstract function getNewPropelModel();
 
+    public function createWithArray($arguments=[]){
+        try{
+            $this->setPropelModel($this->getNewPropelModel());
+            return $this->updateWithArray($arguments);
+
+        }catch (Exception $ex){
+            throw new Exception(sprintf('%s Model failed to be created',$this->getPropelModelName()),0,$ex);
+        }
+    }
 
     public function updateWithArray($arguments=[]){
 

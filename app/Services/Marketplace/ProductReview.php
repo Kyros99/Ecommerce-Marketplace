@@ -23,18 +23,8 @@ class ProductReview extends PropelService
         return 'ProductReview   ';
     }
 
-    public function createWithArray($arguments = []){
-
-        try{
-            //Create model
-            $model = new \App\Propel\ProductReview();
-            $this->setPropelModel($model);
-            //Update
-            return $this->updateWithArray($arguments);
-        }catch (\Throwable $exception){
-            throw new Exception(sprintf('%s failed to be created',$this->getPropelModelName()),0,$exception);
-
-        }
+    public function getNewPropelModel(){
+        return new \App\Propel\ProductReview();
     }
 
 }

@@ -16,4 +16,7 @@ class ProductCategory extends PropelService
     public function getPropelModelName(){
         return 'ProductCategory';
     }
+    public function getNewPropelModel(){
+        return new \App\Propel\ProductCategory();
+    }
 }
