@@ -67,4 +67,16 @@ class LoginController extends AccessController
 
     }
 
+    public function logout(Request $request)
+    {
+        // Remove token from cookies
+        Cookie::queue(Cookie::forget('user_token'));
+
+        // Clear session data
+        session()->flush();
+
+        // Redirect to login or homepage
+        return redirect('/login');
+    }
+
 }

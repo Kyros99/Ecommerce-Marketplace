@@ -19,6 +19,8 @@ Route::post('/register',[RegisterController::class,'register']);
 
 Route::get('/login',[LoginController::class,'loginPage']);
 Route::post('/login',[LoginController::class,'login']);
+Route::get('/logout', [LoginController::class, 'logout']);
+
 
 Route::get('/onboarding',[HomeController::class,'onboardingPage']);
 Route::post('/onboarding',[HomeController::class,'onboarding']);
